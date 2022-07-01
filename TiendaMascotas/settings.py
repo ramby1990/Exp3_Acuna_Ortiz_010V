@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pet',
     'crispy_forms',
+    'rest_framework',
+    'rest_cliente',
 ]
 
 MIDDLEWARE = [

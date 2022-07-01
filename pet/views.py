@@ -81,10 +81,11 @@ def registrarCliente(request):
     region = request.POST['txtRegion']
     comuna = request.POST['txtComuna']
     contraseña = request.POST['txtContraseña']
+    telefono = request.POST['txtTelefono']
     
     
 
-    cliente = Cliente.objects.create(rut=rut, nombre=nombre, email=email, region=region, comuna=comuna, contraseña=contraseña)
+    cliente = Cliente.objects.create(rut=rut, nombre=nombre, email=email, region=region, comuna=comuna, contraseña=contraseña, telefono=telefono)
     return redirect('admincli')
 
 def edicionCliente(request, rut):
@@ -98,6 +99,7 @@ def editarCliente(request):
     region = request.POST['txtRegion']
     comuna = request.POST['txtComuna']
     contraseña = request.POST['txtContraseña']
+    telefono = request.POST['txtTelefono']
 
     cliente = Cliente.objects.get(rut=rut)
     cliente.nombre = nombre
@@ -105,6 +107,7 @@ def editarCliente(request):
     cliente.region = region
     cliente.comuna = comuna
     cliente.contraseña = contraseña
+    cliente.telefono = telefono
     cliente.save()
 
     return redirect('admincli') 

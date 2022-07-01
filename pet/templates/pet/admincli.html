@@ -117,7 +117,11 @@
                                 </select>
                                 <br><br>
                                 <div class="form-group">
-                                   <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                                    <input type="telefono" name="txtTelefono" id="txtTelefono" class="form-control" placeholder="Digite su Telefono" required>
+                                </div>
+                                <br><br>
+                                <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
                                 </div>
 
                             </form>
@@ -141,7 +145,8 @@
                                     <th>Email</th>
                                     <th>Region</th>
                                     <th>Comuna</th> 
-                                    <th>Contraseña</th>                                
+                                    <th>Contraseña</th>
+                                    <th>Telefono</th>                                
                                     <th colspan="2">Opciones</th>
                                 </tr>
                             </thead>
@@ -155,6 +160,7 @@
                                     <td>{{a.region}}</td>
                                     <td>{{a.comuna}}</td>
                                     <td>{{a.contraseña}}</td>
+                                    <td>{{a.telefono}}</td>
                                     {% if user.is_authenticated %}
                                     <td><a href="edicionCliente/{{a.rut}}" class="btn btn-info">Editar</a></td>
 
